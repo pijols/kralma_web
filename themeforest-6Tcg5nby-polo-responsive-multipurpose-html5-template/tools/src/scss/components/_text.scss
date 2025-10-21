@@ -1,0 +1,23 @@
+// Text size
+.text-xs,
+.text-xs * { font-size: $font-size-xs !important; }
+
+.text-sm,
+.text-sm * { font-size: $font-size-sm !important; }
+
+.text-md,
+.text-md * { font-size: $font-size-base !important; }
+
+.text-lg,
+.text-lg * { font-size: $font-size-lg !important; }
+
+.text-xl,
+.text-xl * { font-size: $font-size-xl !important; }
+
+
+// Text hover color variation 
+@each $color, $value in $theme-colors {
+    .text-hover-#{$color} {
+      @include text-hover-variant($value);
+    }
+ }

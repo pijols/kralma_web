@@ -1,0 +1,160 @@
+//
+// Buttons
+//
+
+.btn {
+  position: relative;
+  font-size: $btn-font-size;
+  font-weight: $btn-font-weight;
+  letter-spacing: $btn-letter-spacing;
+  text-transform: $btn-text-transform;
+  + .btn {
+    margin-left: 0.5rem;
+  }
+  
+/*   &:not(.rounded-circle) > i {
+    margin-right:.5rem;
+  } */
+
+  &.desc:before {
+    content: "\e92e";
+    float: right;
+    margin-left: 6px;
+    font-family: "inspiro-icons";
+  }
+
+  &.asc:before {
+    content: "\e931";
+    float: right;
+    margin-left: 6px;
+    font-family: "inspiro-icons";
+  }
+  &.btn-white{
+    border: $input-btn-border-width solid $border-color;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: shift-color($white, 5%);
+      border-color: shift-color($white, 5%);
+    }
+  }
+}
+
+
+//
+// Button Sizes
+//
+
+.btn-xs {
+  @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $btn-font-size-xs, $btn-border-radius-xs);
+}
+
+.btn-sm {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
+}
+
+.btn-lg {
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
+}
+
+.btn-xl {
+  @include button-size($btn-padding-y-xl, $btn-padding-x-xl, $btn-font-size-xl, $btn-border-radius-xl);
+}
+ 
+.btn-pill {
+  border-radius: 6.1875rem;
+}
+
+
+button.btn.btn-icon-holder,
+.btn:not(.close):not(.mfp-close).btn-icon-holder,
+a.btn:not([href]):not([tabindex]).btn-icon-holder {
+  padding-right: 16px;
+}
+button.btn.btn-icon-holder:before,
+.btn:not(.close):not(.mfp-close).btn-icon-holder:before,
+a.btn:not([href]):not([tabindex]).btn-icon-holder:before {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  content: "";
+  height: 100%;
+  position: absolute;
+  right: 42px;
+  top: 0;
+}
+button.btn.btn-icon-holder.btn-outline:before,
+.btn:not(.close):not(.mfp-close).btn-icon-holder.btn-outline:before,
+a.btn:not([href]):not([tabindex]).btn-icon-holder.btn-outline:before {
+  border-left: 2px solid #2250fc;
+}
+button.btn.btn-icon-holder.btn-outline.btn-dark:before,
+.btn:not(.close):not(.mfp-close).btn-icon-holder.btn-outline.btn-dark:before,
+a.btn:not([href]):not([tabindex]).btn-icon-holder.btn-outline.btn-dark:before {
+  border-left: 2px solid #111;
+}
+button.btn.btn-icon-holder.btn-light:before,
+.btn:not(.close):not(.mfp-close).btn-icon-holder.btn-light:before,
+a.btn:not([href]):not([tabindex]).btn-icon-holder.btn-light:before {
+  border-left: 1px solid #f3f3f3;
+}
+button.btn.btn-icon-holder.btn-light.btn-light-hover:before, button.btn.btn-icon-holder.btn-light.btn-light-hover:hover,
+.btn:not(.close):not(.mfp-close).btn-icon-holder.btn-light.btn-light-hover:before,
+.btn:not(.close):not(.mfp-close).btn-icon-holder.btn-light.btn-light-hover:hover,
+a.btn:not([href]):not([tabindex]).btn-icon-holder.btn-light.btn-light-hover:before,
+a.btn:not([href]):not([tabindex]).btn-icon-holder.btn-light.btn-light-hover:hover {
+  border-left: 1px solid #f3f3f3;
+}
+button.btn.btn-icon-holder i,
+.btn:not(.close):not(.mfp-close).btn-icon-holder i,
+a.btn:not([href]):not([tabindex]).btn-icon-holder i {
+  margin-left: 30px;
+  margin-right: -2px;
+}
+button.btn.btn-icon-holder.btn-xs,
+.btn:not(.close):not(.mfp-close).btn-icon-holder.btn-xs,
+a.btn:not([href]):not([tabindex]).btn-icon-holder.btn-xs {
+  padding-right: 10px;
+}
+button.btn.btn-icon-holder.btn-xs:before,
+.btn:not(.close):not(.mfp-close).btn-icon-holder.btn-xs:before,
+a.btn:not([href]):not([tabindex]).btn-icon-holder.btn-xs:before {
+  right: 30px;
+}
+button.btn.btn-icon-holder.btn-xs i,
+.btn:not(.close):not(.mfp-close).btn-icon-holder.btn-xs i,
+a.btn:not([href]):not([tabindex]).btn-icon-holder.btn-xs i {
+  margin-left: 20px;
+  margin-right: 2px;
+}
+button.btn.btn-icon-holder.btn-sm,
+.btn:not(.close):not(.mfp-close).btn-icon-holder.btn-sm,
+a.btn:not([href]):not([tabindex]).btn-icon-holder.btn-sm {
+  padding-right: 16px;
+}
+button.btn.btn-icon-holder.btn-sm:before,
+.btn:not(.close):not(.mfp-close).btn-icon-holder.btn-sm:before,
+a.btn:not([href]):not([tabindex]).btn-icon-holder.btn-sm:before {
+  right: 36px;
+}
+button.btn.btn-icon-holder.btn-sm i,
+.btn:not(.close):not(.mfp-close).btn-icon-holder.btn-sm i,
+a.btn:not([href]):not([tabindex]).btn-icon-holder.btn-sm i {
+  margin-left: 24px;
+  margin-right: 0;
+}
+button.btn.btn-icon-holder.btn-lg,
+.btn:not(.close):not(.mfp-close).btn-icon-holder.btn-lg,
+a.btn:not([href]):not([tabindex]).btn-icon-holder.btn-lg {
+  padding-right: 28px;
+}
+button.btn.btn-icon-holder.btn-lg:before,
+.btn:not(.close):not(.mfp-close).btn-icon-holder.btn-lg:before,
+a.btn:not([href]):not([tabindex]).btn-icon-holder.btn-lg:before {
+  right: 50px;
+}
+button.btn.btn-icon-holder.btn-lg i,
+.btn:not(.close):not(.mfp-close).btn-icon-holder.btn-lg i,
+a.btn:not([href]):not([tabindex]).btn-icon-holder.btn-lg i {
+  margin-left: 34px;
+  margin-right: -8px;
+}

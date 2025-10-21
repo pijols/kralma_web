@@ -1,0 +1,7 @@
+// Soft bg variation 
+@each $state, $value in $theme-colors {
+    $background: shift-color($value, $bg-soft-bg-scale);
+    .bg-soft-#{$state} {
+      @include bg-soft-variant($background);
+    }
+}

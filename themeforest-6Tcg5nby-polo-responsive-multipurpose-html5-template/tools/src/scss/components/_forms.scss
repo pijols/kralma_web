@@ -1,0 +1,116 @@
+//
+// Forms
+//
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+.input-group-text {
+    min-height: 40px;
+}
+
+//Form-group
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.input-group {
+    align-items: start;
+}
+
+.form-control-auto-height {
+    height: auto !important;
+}
+
+.form-file-upload {
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.form-check-label,
+.form-file {
+    width: 100%;
+}
+
+//Label
+form label {
+    text-transform: $form-label-text-transform;
+    margin-bottom: $form-label-margin-bottom;
+    font-size: $form-label-font-size;
+    font-weight: $form-label-font-weight;
+    color: $form-label-color;
+    display: block;
+    .btn,
+    button {
+        z-index: 2;
+    }
+}
+
+.input-group input~.btn i {
+    margin-right: 0;
+}
+
+//Error messages
+.is-invalid,
+.is-invalid~label {
+    color: $danger;
+}
+
+.is-invalid~label {
+    margin-bottom: 0;
+}
+
+.is-invalid:not(.form-control):not([type="checkbox"]) {
+    display: block;
+    clear: both;
+    width: 100%;
+    font-size: $font-size-sm;
+}
+
+.form-no-border {
+    .form-control,
+    .input-group-text {
+        border: none !important;
+        box-shadow: none !important;
+        &:focus {
+            border: none !important;
+            box-shadow: none !important;
+        }
+    }
+}
+
+th .form-check,
+td .form-check {
+    padding-left: 0;
+    text-align: center;
+    .form-check-input {
+        float: none;
+        margin: 0;
+        vertical-align: middle;
+    }
+}
+
+//
+// Item Checkbox
+//
+.form-check.image-checkbox .form-check-input {
+    position: relative;
+    opacity: 0;
+}
+
+.form-check.image-checkbox .form-check-input:checked {
+    opacity: 1;
+}
+
+.form-check.image-checkbox .form-check-input {
+    left: 2rem;
+}
+
+//
+//Copy to clipboard icon
+//
+.input-group-text[data-clipboard] {
+    cursor: pointer;
+}

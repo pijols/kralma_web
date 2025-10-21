@@ -1,0 +1,142 @@
+//
+// Figure
+//
+.figure {
+    display: inline-block;
+    flex-shrink: 0;
+    position: relative;
+    border-radius: 0.75rem;
+    margin-right: 1rem;
+    .figure-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      color: #3f4254;
+      background-color: #f3f6f9;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      border-radius: 0.75rem;
+    }
+  
+    .figure-badge {
+      position: absolute;
+      border: 2px solid #fff;
+      border-radius: 100%;
+      top: 0;
+      right: 0;
+    }
+    > a > img,
+    > img {
+      display: flex;
+      border-radius: $border-radius;
+      width: 5rem;
+      height:auto;
+    }
+  
+    &.figure-circle {
+      > a > img,
+      > img {
+        border-radius: 50% !important;
+      }
+    }
+
+    &.figure-sm {
+      > a > img,
+    > img {
+      width:3rem;
+      border-radius: $border-radius-sm;
+    }
+    }
+
+    &.figure-xs {
+      > a > img,
+    > img {
+      width:1.5rem;
+      border-radius: $border-radius-xs;
+    }
+    }
+
+  
+    .figure-label {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .figure-badge {
+      width: 12px;
+      height: 12px;
+      top: -6px;
+      right: -6px;
+  
+      &.figure-badge-bottom {
+        top: auto;
+        bottom: -6px;
+      }
+    }
+  
+    &.figure-circle .figure-badge {
+      top: -1.75px;
+      right: -1.75px;
+  
+      &.figure-badge-bottom {
+        top: auto;
+        bottom: -1.75px;
+      }
+    }
+  
+    &.figure-fixed {
+      .figure-label {
+        width: 50px;
+        height: 50px;
+      }
+  
+      > img {
+        width: 50px;
+        height: 50px;
+        max-width: auto;
+      }
+    }
+  
+  }
+  
+  
+  .figure-group {
+    display: flex;
+    align-items: center;
+  
+    .figure {
+      position: relative;
+      z-index: 0;
+      margin-left: -10px;
+      border: 2px solid #fff;
+      transition: all 0.3s ease;
+  
+      &:first-child {
+        margin-left: 0;
+      }
+  
+      &:hover {
+        transition: all .3s ease;
+        z-index: 1;
+      }
+    }
+  
+    &.figure-hover .figure {
+      cursor: pointer;
+    }
+  }
+  
+  .figure-list {
+    display: flex;
+    align-items: center;
+  
+    .figure {
+      margin-right: 0.5rem;
+  
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }

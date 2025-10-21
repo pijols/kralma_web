@@ -1,0 +1,36 @@
+
+//
+// Pagination
+//
+
+
+.pagination {
+    margin-bottom: 0;
+}
+
+.page-item {
+    .page-link,
+    & > span {
+        font-size: $pagination-font-size;
+    }
+}
+
+
+
+
+.page-item {
+    .page-link {
+        color: $body-color;
+
+    }
+    .page-link,
+    & > span {
+
+        //font-family: $pagination-font-family;  
+        font-size: $pagination-font-size;
+        border-radius: $pagination-border-radius;
+//        @include box-shadow($pagination-box-shadow)
+
+    }
+
+}

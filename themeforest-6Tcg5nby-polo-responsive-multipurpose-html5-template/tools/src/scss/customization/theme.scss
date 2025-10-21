@@ -1,0 +1,1093 @@
+@import "../variables";
+@import "../mixins";
+
+
+//Default #2250fc
+$theme: #7341B4;
+
+/* ----------------------------------------------------------------
+	Typography
+-----------------------------------------------------------------*/
+a:not(.btn):not(.badge):hover, a:not(.btn):not(.badge):focus, a:not(.btn):not(.badge):active {
+	color: $theme;
+}
+/* ----------------------------------------------------------------
+	Accordion
+-----------------------------------------------------------------*/
+.accordion { 
+    &.accordion-theme {
+        .ac-item {
+            background-color: $theme;
+        }
+    }
+}
+
+/* ----------------------------------------------------------------
+	Blockquotes
+-----------------------------------------------------------------*/
+.blockquote {
+    border-left: 3px solid $theme;
+}
+
+.blockquote-color {
+    background-color: $theme;
+}
+
+/* ----------------------------------------------------------------------
+	Buttons
+-------------------------------------------------------------------------*/
+button.btn, 
+.btn:not(.close):not(.mfp-close), a.btn:not([href]):not([tabindex]) {
+    background-color: $theme;
+    border-color: $theme;
+
+    &:hover,
+    &:focus,
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+        background-color: $theme;
+        border-color: $theme;
+    }
+
+    &.btn-outline {
+        border-color: $theme;
+        color: $theme;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            background-color: $theme;
+            border-color: $theme;
+        }
+    }
+
+    &.btn-primary {
+        background-color: $theme;
+        border-color: $theme;
+
+        &:hover,
+        &:focus,
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active {
+            background-color: $theme;
+            border-color: $theme;
+        }
+    }
+
+    &.rounded-circle-holder {
+        &.btn-outline {
+            &:before {
+                border-left-color: $theme;
+            }
+        }
+    }
+}
+
+/* ----------------------------------------------------------------------
+    call-to-action (call to action)
+-------------------------------------------------------------------------*/
+.call-to-action {
+    &.call-to-action-colored {
+        background-color: $theme;
+    }
+}
+
+/* ----------------------------------------------------------------
+Carousels & Slider
+-----------------------------------------------------------------*/
+
+.inspiro-slider {
+    .flickity-button:hover {
+	    background-color: $theme;
+    }
+}
+
+.carousel {
+    .flickity-button {
+        &:hover {
+            background-color: $theme;
+        }
+    }
+}
+
+/* ----------------------------------------------------------------
+    Dropcat & Highlight
+-----------------------------------------------------------------*/
+.dropcap {
+    &.dropcap-colored {
+        background-color: $theme;
+    }
+}
+
+.highlight {
+    &.highlight-colored {
+        background-color: $theme;
+    }
+}
+
+/* ----------------------------------------------------------------------
+Forms
+-------------------------------------------------------------------------*/
+.form-control,
+input,
+select {
+    &:focus {
+        border-color: $theme;
+    }
+}
+
+/* ----------------------------------------------------------------------
+	Headings
+-------------------------------------------------------------------------*/
+.heading-text {
+    &.heading-section {
+        >h2 {
+            &:before {
+                background-color: $theme;
+            }
+        }
+    }
+}
+
+.heading-creative {
+    strong {
+        color: $theme;
+    }
+}
+
+/* ----------------------------------------------------------------------
+	Icon Box
+-------------------------------------------------------------------------*/
+.icon-box {
+    &.effect {
+        &.dark {
+            .icon i:after {
+                box-shado: 0 0 0 3px $theme;
+            }
+
+            .icon i:hover,
+            &:hover .icon i {
+                background-color: $theme;
+            }
+        }
+    }
+}
+
+.text-box {
+    &.text-box-light {
+        &:hover {
+            background: $theme;
+        }
+    }
+}
+
+.feature-box {
+    &:hover {
+
+        h2,
+        h3,
+        h4 {
+            color: $theme;
+        }
+    }
+}
+
+/* ----------------------------------------------------------------
+Lables & Badgets
+-----------------------------------------------------------------*/
+.badge-primary {
+    background-color: $theme;
+}
+
+/* ----------------------------------------------------------------------
+	Light Box
+-------------------------------------------------------------------------*/
+.mfp-ajax-holder .mfp-close:hover {
+    background: $theme;
+}
+
+/* ----------------------------------------------------------------------
+	Lists & Bullet Lists
+-------------------------------------------------------------------------*/
+.list-colored {
+    li a {
+        color: $theme;
+    }
+}
+
+.list-legend {
+    li {
+        span {
+            background-color: $theme;
+        }
+    }
+}
+
+.list-icon {
+
+    &.list-icon-colored li:before,
+    &.icon-list-colored i {
+        color: $theme;
+    }
+}
+
+.list-group-item.active {
+    background-color: $theme;
+    border: $theme;
+}
+
+/* ----------------------------------------------------------------------
+	Pagination & Pager
+-------------------------------------------------------------------------*/
+.post-navigation {
+    a:hover {
+        color: $theme;
+    }
+}
+
+/* ----------------------------------------------------------------------
+	Pricing Table
+-------------------------------------------------------------------------*/
+.pricing-table {
+    &.colored {
+        .plan-header {
+            background-color: $theme;
+        }
+    }
+}
+
+/* ----------------------------------------------------------------------
+	Progress Bar
+-------------------------------------------------------------------------*/
+.p-progress-bar,
+.progress-bar {
+    background-color: $theme;
+}
+
+/*--------------------------------------------------------
+     Tabs
+---------------------------------------------------------*/
+.tabs {
+    .nav-tabs {
+        .nav-link.active {
+            color: $theme;
+            border-bottom: 2px solid $theme;
+        }
+    }
+
+    &.tabs-vertical {
+        .nav-link.active {
+            color: $theme;
+            border-right: 2px solid $theme;
+        }
+    }
+}
+
+/* ----------------------------------------------------------------
+	Date picker
+-----------------------------------------------------------------*/
+.datepicker {
+    tbody tr>td {
+        &.day {
+
+            &.today.active,
+            &.active,
+            &.selected {
+                background: $theme !important;
+
+                &:hover {
+                    background: $theme;
+                }
+            }
+
+            &.range {
+                &.today {
+                    background: $theme;
+                }
+            }
+        }
+
+        span.month {
+            &.active {
+                background: $theme;
+
+                &:hover {
+                    background: $theme;
+                }
+            }
+        }
+    }
+}
+
+.datetimepicker tbody tr>td.day.today,
+.datetimepicker table tr td.active:active,
+.datetimepicker table tr td.active:hover:active,
+.datetimepicker table tr td.active.disabled:active,
+.datetimepicker table tr td.active.disabled:hover:active,
+.datetimepicker table tr td.active.active,
+.datetimepicker table tr td.active:hover.active,
+.datetimepicker table tr td.active.disabled.active,
+.datetimepicker table tr td.active.disabled:hover.active,
+.datetimepicker table tr td span.active:active,
+.datetimepicker table tr td span.active:hover:active,
+.datetimepicker table tr td span.active.disabled:active,
+.datetimepicker table tr td span.active.disabled:hover:active,
+.datetimepicker table tr td span.active.active,
+.datetimepicker table tr td span.active:hover.active,
+.datetimepicker table tr td span.active.disabled.active,
+.datetimepicker table tr td span.active.disabled:hover.active {
+    background: $theme !important;
+}
+
+.datetimepicker table tr>td.today:hover,
+.datetimepicker table tr>td.today:hover:hover,
+.datetimepicker table tr>td.today.disabled:hover,
+.datetimepicker table tr>td.today.disabled:hover:hover,
+.datetimepicker table tr>td.today:active,
+.datetimepicker table tr>td.today:hover:active,
+.datetimepicker table tr>td.today.disabled:active,
+.datetimepicker table tr>td.today.disabled:hover:active,
+.datetimepicker table tr>td.today.active,
+.datetimepicker table tr>td.today:hover.active,
+.datetimepicker table tr>td.today.disabled.active,
+.datetimepicker table tr>td.today.disabled:hover.active,
+.datetimepicker table tr>td.today.disabled,
+.datetimepicker table tr>td.today:hover.disabled,
+.datetimepicker table tr>td.today.disabled.disabled,
+.datetimepicker table tr>td.today.disabled:hover.disabled,
+.datetimepicker table tr>td.today[disabled],
+.datetimepicker table tr>td.today:hover[disabled],
+.datetimepicker table tr>td.today.disabled[disabled],
+.datetimepicker table tr>td.today.disabled:hover[disabled] {
+    background: $theme !important;
+}
+
+.daterangepicker {
+    .daterangepicker_input {
+        .input-mini {
+
+            &.active,
+            &:focus {
+                border: 1px solid $theme;
+            }
+        }
+    }
+
+    tbody td {
+        &.today {
+            background: $theme;
+        }
+
+        &.active,
+        &.in-range,
+        &.active:hover,
+        &.in-range:hover {
+            background: $theme;
+        }
+    }
+
+    select {
+        &.ampmselect {
+
+            &.active,
+            &:focus {
+                border: 1px solid $theme;
+            }
+        }
+
+        &.hourselect {
+
+            &.active,
+            &:focus {
+                border: 1px solid $theme;
+            }
+        }
+
+        &.minuteselect {
+
+            &.active,
+            &:focus {
+                border: 1px solid $theme;
+            }
+        }
+
+        &.monthselect {
+
+            &.active,
+            &:focus {
+                border: 1px solid $theme;
+            }
+        }
+
+        &.yearselect {
+
+            &.active,
+            &:focus {
+                border: 1px solid $theme;
+            }
+        }
+    }
+
+    .calendar-time i {
+        color: #b2b1c5;
+    }
+
+    .ranges li {
+        &.active {
+            background: $theme;
+            border: 1px solid $theme;
+        }
+    }
+}
+
+/* ----------------------------------------------------------------
+	Date range picker
+-----------------------------------------------------------------*/
+.daterangepicker {
+
+    td.active:not(.off),
+    td.active:hover,
+    .active.end-date.in-range {
+        background: $theme !important;
+    }
+}
+
+input.daterange:after,
+input.dates:after {
+    background: $theme;
+}
+
+/* ----------------------------------------------------------------
+	Bootstrap Switch
+-----------------------------------------------------------------*/
+.bootstrap-switch {
+
+    .bootstrap-switch-on,
+    .bootstrap-switch-handle-on,
+    .bootstrap-switch-handle-off {
+        background-color: $theme;
+        border-color: $theme;
+    }
+}
+
+.p-radio {
+    &:checked+.p-radio-style {
+        &:before {
+            border: 1px solid $theme;
+            background: $theme;
+        }
+    }
+}
+
+.p-checkbox {
+    &:checked+.p-checkbox-style {
+        &:before {
+            border: $theme;
+            background: $theme;
+        }
+    }
+}
+
+.p-switch {
+    >input[type="checkbox"] {
+        &:checked+.p-switch-style {
+            background-color: $theme;
+        }
+    }
+}
+
+/* ----------------------------------------------------------------
+	Ion Range Sliders
+-----------------------------------------------------------------*/
+.irs-bar {
+    background: $theme;
+}
+
+.irs-from,
+.irs-to,
+.irs-single {
+    background: $theme;
+}
+
+.irs-from:after,
+.irs-to:after,
+.irs-single:after {
+    border-top-color: $theme;
+}
+
+/* ----------------------------------------------------------------
+	Blog
+-----------------------------------------------------------------*/
+.post-item {
+
+    .post-image,
+    .post-slider,
+    .post-video,
+    .post-audio,
+    .post-quote-img {
+        .post-meta-category {
+            background-color: $theme;
+        }
+    }
+
+    .post-quote-img {
+        .post-meta-category {
+            color: $theme;
+
+            a {
+                color: $theme;
+            }
+        }
+    }
+
+    /*Types*/
+    &.quote {
+        .post-item-wrap {
+            background-color: $theme;
+        }
+    }
+}
+
+.post-author {
+    a {
+        color: $theme;
+    }
+}
+
+/* ----------------------------------------------------------------
+	Grid Filter
+-----------------------------------------------------------------*/
+.grid-filter {
+    li {
+
+        &:hover,
+        &.active {
+            a {
+                background-color: $theme;
+            }
+        }
+    }
+
+    &.gf-outline {
+        li {
+
+            &:hover,
+            &.active {
+                a {
+                    border-color: $theme;
+                    color: $theme;
+                }
+            }
+        }
+    }
+
+    &.gf-lines {
+        li {
+
+            &:hover,
+            &.active {
+                a {
+                    color: $theme;
+
+                    &:after {
+                        background-color: $theme;
+                    }
+                }
+            }
+        }
+    }
+
+    &.gf-classic {
+        li {
+
+            &:hover,
+            &.active {
+                a {
+                    background-color: $theme;
+                }
+            }
+        }
+    }
+
+    &.gf-default {
+        li {
+
+            &:hover,
+            &.active {
+                a {
+                    color: $theme;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------
+     Comments
+------------------------------------------------------*/
+.comments {
+    .comment_number {
+        span {
+            color: $theme;
+        }
+    }
+}
+
+.respond-comment {
+    span {
+        color: $theme;
+    }
+}
+
+/*------------------------------------------------------
+     Extras
+------------------------------------------------------*/
+.item-link {
+    color: $theme;
+
+    &:hover {
+        color: $theme;
+    }
+}
+
+.nav-link {
+    color: $theme;
+}
+
+.background-colored {
+    background-color: $theme;
+}
+
+/* ----------------------------------------------------------------
+Scroll top
+-----------------------------------------------------------------*/
+#scrollTop {
+
+    &:after,
+    &:before {
+        background-color: $theme;
+    }
+}
+
+.fc-event-primary {
+    &.fc-event {
+        background-color: $theme;
+        border-color: $theme;
+    }
+}
+
+.icon-set-container {
+    .row>[class^="col-"] {
+        color: $theme;
+
+        &:hover {
+            background-color: $theme;
+
+            .icon-holder {
+                color: $theme;
+            }
+        }
+    }
+}
+
+/* ----------------------------------------------------------------
+    Forum
+-----------------------------------------------------------------*/
+.forum {
+    thead tr {
+        >th {
+            background-color: $theme;
+        }
+    }
+}
+
+/* ----------------------------------------------------------------
+    Header
+-----------------------------------------------------------------*/
+#header {
+    &.header-modern:not(.header-active) {
+        &.header-colored {
+
+            .header-inner,
+            #header-wrap {
+                background-color: $theme;
+            }
+        }
+    }
+
+    &.header-colored {
+
+        .header-inner,
+        #header-wrap {
+            background-color: $theme;
+        }
+    }
+
+    /* ----------------------------------------------------------------
+Main Menu
+-----------------------------------------------------------------*/
+    #mainMenu {
+        nav {
+            >ul {
+                >li {
+
+                    &.hover-active,
+                    &.current,
+                    &:hover,
+                    &:focus {
+
+                        >a,
+                        >span {
+                            color: $theme;
+                        }
+                    }
+
+                    .dropdown-menu {
+                        >li {
+
+                            >a,
+                            >span,
+                            [class*="col-"]>ul>li>a {
+
+                                &:focus,
+                                &:hover,
+                                &:active {
+                                    color: $theme;
+                                }
+                            }
+
+                            &.current,
+                            &:hover,
+                            &:focus,
+                            &:active,
+                            &.hover-active {
+
+                                >a,
+                                >span {
+                                    color: $theme;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.menu-rounded {
+            nav {
+                >ul {
+                    >li {
+
+                        &.current,
+                        &:hover,
+                        &:focus {
+                            >a {
+                                background-color: $theme;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.menu-outline {
+            nav {
+                >ul {
+                    >li {
+
+                        &.current,
+                        &:hover,
+                        &:focus {
+                            >a {
+                                color: $theme;
+                                border-color: $theme;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.menu-lines {
+            nav {
+                >ul {
+                    >li {
+
+                        &.current,
+                        &:hover,
+                        &:focus {
+                            >a {
+                                color: $theme;
+
+                                &:after {
+                                    background-color: $theme;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.menu-hover-background {
+            nav {
+                >ul {
+                    >li {
+
+                        &.current,
+                        &:hover,
+                        &:focus {
+                            background-color: $theme;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #shopping-cart {
+        >a {
+            .shopping-cart-items {
+                background: $theme;
+            }
+        }
+    }
+}
+
+/* ----------------------------------------------------------------
+Dots Menu
+-----------------------------------------------------------------*/
+#dotsMenu {
+    ul {
+        li {
+            &:hover {
+                background-color: $theme;
+            }
+
+            &.current {
+                background-color: $theme;
+            }
+
+            a {
+
+                &:hover,
+                &.active {
+                    &:before {
+                        background-color: $theme;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Menu Dark*/
+#mainMenu.dark:not(.light):not(.menu-rounded) {
+    nav {
+        >ul {
+            >li {
+                .dropdown-menu {
+                    >li {
+
+                        >a,
+                        >span,
+                        [class*="col-"]>ul>li>a {
+                            &:hover {
+                                color: $theme;
+                            }
+                        }
+                    }
+                }
+
+                &.current,
+                &:hover,
+                &:focus,
+                &.hover-active {
+
+                    >a,
+                    >span {
+                        color: $theme;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-menu {
+    nav {
+        >ul {
+            >li {
+
+                &:hover,
+                &.active {
+                    >a {
+                        color: $theme;
+                    }
+                }
+            }
+        }
+    }
+
+    &.menu-rounded {
+        nav {
+            >ul {
+                >li {
+
+                    &:hover,
+                    &.active {
+                        >a {
+                            background-color: $theme;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.menu-outline {
+        nav {
+            >ul {
+                >li {
+
+                    &:hover,
+                    &.active {
+                        >a {
+                            border-color: $theme;
+                            color: $theme;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.menu-lines {
+        nav {
+            >ul {
+                >li {
+
+                    &:hover,
+                    &.active {
+                        >a {
+                            color: $theme;
+
+                            &:after {
+                                background-color: $theme;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.menu-solid {
+        nav {
+            >ul {
+                >li {
+
+                    &:hover,
+                    &.active {
+                        >a {
+                            background-color: $theme;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .page-menu {
+
+        &.menu-rounded,
+        &.menu-outline,
+        &.menu-lines,
+        &.menu-solid,
+        &.menu-light,
+        &.menu-creative, 
+        &.inverted {
+            nav {
+                >ul {
+                    >li {
+
+                        &:hover,
+                        &.active {
+                            >a {
+                                color: $theme;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#search {
+    .btn-search-close {
+        background-color: $theme;
+    }
+}
+
+/* ----------------------------------------------------------------
+Topbar
+-----------------------------------------------------------------*/
+#topbar {
+
+    &.topbar-colored,
+    &.topbar-colored.dark {
+        background-color: $theme;
+    }
+}
+
+/* ----------------------------------------------------------------
+Helpers
+-----------------------------------------------------------------*/
+.text-theme {
+    color: $theme !important;
+}
+
+/* ----------------------------------------------------------------
+Portfolio
+-----------------------------------------------------------------*/
+.portfolio-item,
+.grid-item {
+
+    .portfolio-description,
+    .grid-description,
+    .portfolio-links {
+        a {
+            &:hover {
+                i {
+                    background-color: $theme;
+                    border: 1px solid $theme;
+                }
+            }
+        }
+    }
+}
+
+/* ----------------------------------------------------------------
+	Widgets
+-----------------------------------------------------------------*/
+.widget-tweeter li a,
+.widget-twitter li a {
+    color: $theme;
+}
+
+.tags a {
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        background-color: $theme;
+        border-color: $theme;
+    }
+}
+
+

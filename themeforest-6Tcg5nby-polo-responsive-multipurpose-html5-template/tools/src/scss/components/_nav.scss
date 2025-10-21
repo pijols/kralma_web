@@ -1,0 +1,33 @@
+//
+// Nav
+//
+
+.nav-link {
+  color: $nav-link-color;
+  font-size: $nav-link-font-size;
+
+  &:hover {
+    color: $nav-link-active-color;
+  }
+
+  &.active {
+    color: $nav-link-active-color;
+  }
+}
+
+.nav-item {
+  .btn {
+    font-size: $nav-link-font-size;
+  }
+  .rounded-circle {
+    color: $nav-link-color;
+  }
+}
+
+
+.nav-x-0 { 
+  .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

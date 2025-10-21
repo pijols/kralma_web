@@ -1,0 +1,32 @@
+.widget-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .widget-title {
+    margin-bottom: $spacer * 1.125;
+    font-size: $widget-title-font-size;
+    font-weight: $widget-title-font-weight;
+}
+
+
+// Widget: Links
+
+.widget-list-item {
+    margin-bottom: $spacer * .3;
+    &:last-child { margin-bottom: 0; }
+  }
+  .widget-list-link {
+    display: block;
+    font-size: $widget-links-font-size;
+    font-weight: $widget-links-font-weight;
+    color: $widget-links-color;
+    margin-bottom: .5rem;
+
+    &:hover {
+      color: $widget-links-hover-color;
+    }
+  }
+  .active > .widget-list-link {
+    color: $widget-links-active-color;
+  }

@@ -1,0 +1,79 @@
+//
+// Scroll to top button
+//
+#scrollTop {
+    z-index: -1;
+    opacity: 0;
+    position: fixed;
+    text-align: center;
+    line-height: 12px !important;
+    right: 26px;
+    bottom: 0;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 100px;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(0, 0, 0, 0.25);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity .3s, bottom .5s, box-shadow 0.3s cubic-bezier(.55, 0, .1, 1), background-color 0.1s linear;
+    background-color: rgba(0, 0, 0, 0.25) !important;
+    overflow: hidden;
+
+    i {
+        line-height: 39px !important;
+        width: 39px !important;
+        height: 39px !important;
+        font-size: 16px !important;
+        top: 0px !important;
+        left: 0px !important;
+        text-align: center !important;
+        position: relative;
+        z-index: 10;
+        background-color: transparent !important;
+        transform: translate(0, 0px);
+        transition: transform 0.2s ease;
+    }
+
+    &:hover {
+        transition: box-shadow 0.3s cubic-bezier(.55, 0, .1, 1), background-color 0.05s linear 0.25s;
+        background-color: transparent !important;
+
+        i {
+            transform: translate(0, -39px) !important;
+        }
+    }
+
+    &:after,
+    &:before {
+        display: block;
+        content: ' ';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: $primary;
+        transform: scale(0);
+        transition: all 0.3s cubic-bezier(.55, 0, .1, 1);
+        border-radius: 100px;
+    }
+
+    &:before {
+        background-color: rgba(255, 255, 255, 0.25);
+        transform: scale(1);
+        transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        opacity: 0;
+        z-index: 2;
+    }
+
+    &:hover:after {
+        transform: scale(1);
+    }
+
+    &:active:before {
+        opacity: 1;
+    }
+}

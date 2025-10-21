@@ -1,0 +1,20 @@
+/*!
+ * Polo Widgets
+ */
+
+ 
+// Widgets
+
+$widget-title-font-size:              $h6-font-size !default;
+$widget-title-font-weight:            $headings-font-weight !default;
+$widget-transition:                   $transition-base !default;
+
+ // Widget: Links
+$widget-links-font-size:              .75rem !default;
+$widget-links-font-weight:            $font-weight-normal !default;
+$widget-links-color:                  $gray-300 !default;
+$widget-links-hover-color:            $primary !default;
+$widget-links-active-color:           $primary !default;
+
+@import "widgets/links";
+  

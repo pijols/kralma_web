@@ -1,0 +1,92 @@
+//
+// Card
+//
+
+.card {
+	position: relative;
+	margin-bottom: $grid-gutter-width;
+	display: flex;
+	align-items: stretch !important;
+	flex-direction: column;
+
+	@if $enable-shadows {
+        @include box-shadow($card-box-shadow);
+	}
+
+	.card-title {
+		font-weight: $card-title-font-weight;
+		margin: 0;
+		margin-left: 0;
+	}
+	.card-subtitle {
+		color: $text-muted;
+		font-size: $font-size-sm;
+		font-weight: $font-weight-normal;
+		display: block;
+	}
+	.card-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: stretch;
+			flex-wrap: wrap;
+			background-color: transparent;
+		h3, h4, h5 {
+			font-size: $card-header-font-size;
+			margin-bottom: 0 !important;
+			font-weight: $font-weight-bold;
+		}
+	}
+	&.card-stretch {
+		height: 100%;
+	}
+} 
+
+
+
+.card-toolbar {
+	display:flex;
+	align-items:center;
+	margin:0;
+	flex-wrap:wrap;
+   }
+
+.grid-layout .card {
+	margin-bottom: 0;
+}
+
+//NEW
+.card {
+	&.card-post-shop {
+		img {
+			width: 100%;
+			height: auto;
+		}
+		.badge-pill {
+			border-radius: 50%;
+			height: 40px;
+			width: 40px;
+			text-align: center;
+			line-height: 40px;
+			padding: 0;
+			text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.14);
+			color: #fff;
+		}
+	}
+
+	.post-video {
+        video,
+        iframe {
+			width: 100%;
+        }
+	}
+	
+	
+    .post-audio {
+        audio,
+        iframe {
+            width: 100%;
+        }
+    }
+}
+
+

@@ -1,0 +1,17 @@
+//
+// Transitions
+//
+
+[class*="hover-"] {
+  transition: all .3s ease-in-out;
+}
+
+.hover-transition:hover,
+.hover-transition:focus {
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
+}
+
+.hover-shadow:hover {
+  box-shadow: $box-shadow-lg;
+}

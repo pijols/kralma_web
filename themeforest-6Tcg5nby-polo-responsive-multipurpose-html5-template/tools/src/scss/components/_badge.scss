@@ -1,0 +1,50 @@
+//
+// Badge
+//
+
+.badge {
+    text-transform: none;
+    i:not(:last-child) {
+        margin-right: .5rem;
+    }
+    &.badge-secondary,
+    &.bg-light,
+    &.badge-soft-secondary,
+    &.badge-soft-light {
+        color: $gray-800;
+    }
+
+    &.badge-floating {
+        position: absolute;
+        top: -.25rem;
+        right: -.25rem;
+    }
+
+    // &.badge-pill {
+    //     padding: $badge-pill-padding-y $badge-pill-padding-x;
+    // }
+
+    // Size variations
+    &.badge-xs { 
+        font-size: 60% !important;
+        padding: .2rem .3rem !important;
+    }   
+}
+ 
+// Soft color variation 
+// @each $state, $value in $theme-colors {
+//     $background: shift-color($value, $badge-soft-bg-scale);
+//     $border: shift-color($value, $badge-soft-border-scale);
+//     $color: shift-color($value, $badge-soft-color-scale);
+//     @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
+//       $color: mix($value, color-contrast($background), abs($badge-soft-color-scale));
+//     } 
+//     .badge-soft-#{$state} {
+//       @include badge-soft-variant($background, $border, $color);
+//     }
+// }
+
+
+
+
+  

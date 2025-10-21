@@ -1,0 +1,15 @@
+//
+// Badge Mixins
+//
+@mixin badge-soft-variant($background, $border, $color) {
+  color: $color;
+  @include gradient-bg($background);
+  border-color: $border;
+
+  &[href] {
+    &:hover {
+      color: $color;
+      background-color: darken($background, 6%);
+    }
+  }
+}

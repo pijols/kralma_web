@@ -1,0 +1,25 @@
+section {
+  padding: $section-padding-y $section-padding-x;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  background-color: $white; 
+  .page-content {
+    padding:0;
+  }
+}
+      
+
+
+//chkd
+@include media-breakpoint-down(md) {
+  section {
+      padding: 40px 0;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .container {
+      padding: 0 30px;
+  }
+}

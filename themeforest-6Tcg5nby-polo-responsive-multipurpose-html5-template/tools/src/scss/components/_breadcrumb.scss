@@ -1,0 +1,33 @@
+//
+// Breadcrumb
+//
+
+.breadcrumb {
+    .breadcrumb-title {
+        font-weight: $font-weight-bold;
+        font-size: $h4-font-size;
+        color: $black;
+        margin-right: $spacer;
+        padding-right: $spacer;
+        border-right: 1px solid $border-color;
+    }
+    .breadcrumb-item {
+        font-weight: $breadcrumb-item-font-weight;
+        color: $breadcrumb-item-color;
+        a{
+            color: $breadcrumb-item-color;
+            &:hover {
+              color: $breadcrumb-item-color-hover-active;
+             }
+        }
+
+        + .breadcrumb-item::before {
+                    content: $breadcrumb-divider;
+                
+        }
+        &.active {
+            color: $breadcrumb-item-color-hover-active;
+        }
+        
+    }
+}

@@ -1,0 +1,11 @@
+# Install dependencies
+npm i
+
+# Compile Sass
+gulp compile:css
+
+# Watch SCSS and JS files for changes and starts local server
+gulp watch
+
+
+//Note: gulp commands and gulpfile is still in progress for better and advanced use in the near future (Polo version 6.0)

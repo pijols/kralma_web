@@ -1,0 +1,7 @@
+// Soft color variation 
+@each $state, $value in $theme-colors {
+    $color: shift-color($value, $color-soft-scale);
+    .color-soft-#{$state} {
+      @include color-soft-variant($color);
+    }
+}

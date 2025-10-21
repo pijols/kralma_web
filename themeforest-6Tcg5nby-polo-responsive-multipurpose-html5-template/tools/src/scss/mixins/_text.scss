@@ -1,0 +1,10 @@
+//
+// Text Mixins
+//
+@mixin text-hover-variant($color) {
+  @include transition($transition-base);
+    &:hover {
+      color: $color;
+    }
+}
+

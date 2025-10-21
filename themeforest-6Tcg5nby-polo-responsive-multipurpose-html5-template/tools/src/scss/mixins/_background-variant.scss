@@ -1,0 +1,6 @@
+//
+// Background Mixins
+//
+@mixin bg-soft-variant($background) {
+  background-color: $background;
+}

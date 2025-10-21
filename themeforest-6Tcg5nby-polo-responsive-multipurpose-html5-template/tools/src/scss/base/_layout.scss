@@ -1,0 +1,109 @@
+/* ----------------------------------------------------------------
+    BODY
+-----------------------------------------------------------------*/
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    .body-inner {
+        padding: 0;
+        margin: 0;
+    }
+    .container-wide {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 60px;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+      body {
+        .body-inner {
+            width: 100%;
+            margin: 0;
+        }
+        .container-wide {
+            padding: 0 30px;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    body.boxed .body-inner {
+        float: none;
+        width: $layout-boxed-width;
+        margin: 0 auto;
+    }
+    body.modern .body-inner {
+        .container {
+            max-width: $layout-modern-width;
+        }
+    }
+    body.frame {
+        &:before,
+        &:after {
+            border: 10px solid #fff;
+            content: "";
+            position: fixed;
+            width: auto;
+            height: 20px;
+            z-index: 200;
+            box-shadow: 0 0 14px 0 rgba(0, 0, 0, .1);
+            left: 0;
+            right: 0;
+        }
+        &:after {
+            bottom: 0;
+        }
+        .body-inner {
+            padding: 20px;
+            &:before,
+            &:after {
+                border: 10px solid #fff;
+                content: "";
+                position: fixed;
+                width: 20px;
+                z-index: 200;
+                box-shadow: 0px 10px 14px 0 rgba(0, 0, 0, 0.1);
+                top: 20px;
+                bottom: 20px;
+                left: 0;
+                right: auto;
+            }
+            &:after {
+                left: auto;
+                right: 0;
+                box-shadow: 0px 10px 14px 0 rgba(0, 0, 0, 0.1);
+            }
+        }
+        #scrollTop {
+            right: 46px;
+        }
+    }
+}
+
+.container-fullwidth {
+    margin: 0 auto;
+    .row {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+
+
+//dark version
+body.dark {
+     background-color: $gray-900;
+    color: $gray-300;
+}
+
+section.dark,
+.dark section {
+    background-color: $gray-900;
+    color: $gray-700;
+}
+
