@@ -47,7 +47,7 @@
             <div class="header-inner">
                 <div class="container">
                     <div id="logo">
-                        <a href="index.html">
+                        <a href="/">
                             <span class="logo-default">Kralma</span>
                             <span class="logo-dark">Kralma</span>
                         </a>
@@ -62,7 +62,7 @@
                                     <li><a href="#">Sākums</a></li>
                                     <li><a href="#about_us">Par mums</a></li>
                                     <li><a href="#services">Pakalpojumi</a></li>
-                                    <li><a href="raksti/index.html">Raksti</a></li>
+                                    <li><a href="raksti/">Raksti</a></li>
                                     <li><a href="#contacts">Kontakti</a></li>
                                 </ul>
                             </nav>
@@ -88,7 +88,7 @@
                                 data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-basealign="slide" data-responsive_offset="on" data-frames='[{"from":"x:right(R);","speed":800,"to":"o:1;","delay":0,"ease":"Power1.easeInOut"},{"delay":"wait","speed":800,"to":"x:left(R);","ease":"Power1.easeInOut"}]'
                                 data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[30,30,30,30]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[30,30,30,30]" style="z-index: 6; white-space: nowrap; font-size: 30px; line-height: 50px; font-weight: 300; color: rgba(255, 255, 255, 1.00);font-family:Roboto;background-color:rgba(0, 0, 0, 1.00);border-width:0px;">Profesionāls auto remonts un diagnostika Rīgā</div>
                             <div class="tp-caption   tp-resizeme" id="slide-1587-layer-3" data-x="['left','left','left','left']" data-hoffset="['30','30','30','20']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['30','30','30','20']" data-fontsize="['40','30','20','20']"
-                                data-lineheight="['60','50','40','40']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-actions='[{"event":"click","action":"scrollbelow","offset":"px","delay":""}]' data-basealign="slide"
+                                data-lineheight="['60','50','40','40']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-basealign="slide"
                                 data-responsive_offset="on" data-frames='[{"from":"x:right(R);","speed":800,"to":"o:1;","delay":0,"ease":"Power1.easeInOut"},{"delay":"wait","speed":800,"to":"x:left(R);","ease":"Power1.easeInOut"},{"frame":"hover","speed":"150","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);bg:rgba(0, 0, 0, 0.65);"}]'
                                 data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[30,30,30,30]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[30,30,30,30]" style="z-index: 7; white-space: nowrap; font-size: 40px; line-height: 60px; font-weight: 700; color: rgba(255, 255, 255, 1.00);font-family:Roboto;background-color:rgba(0, 0, 0, 1.00);border-width:0px;cursor:pointer;"><i class="fa fa-icon-angle-double-right" style="color:#d50000;"></i> Kontakti un lokācija </div>
                         </li>
@@ -288,10 +288,10 @@ Strādājam ātri, kvalitatīvi un ar individuālu pieeju, rūpējoties, lai jū
                 </div>
                 <div class="row m-t-lg-50">
                     <div class="col-lg-12 d-flex justify-content-center m-t-100">
-                        <a href="geo:56.895440,24.221026?q=Krustpils+iela+58,+Rīga,+LV-1057" onclick="handleMapClick(event)">
+                        <a href="https://maps.google.com/?q=Krustpils+iela+58,+Rīga,+LV-1057" onclick="handleMapClick(event)">
                             <div class="icon-box effect large fancy">
                                 <div class="icon"><i class="fa fa-map-marker"></i></div>
-                                <h3>Atvērt navigāciju</h3>
+                                <h3>Atvērt karti</h3>
                             </div>
                         </a>
                     </div>
@@ -349,6 +349,24 @@ Strādājam ātri, kvalitatīvi un ar individuālu pieeju, rūpējoties, lai jū
                     }
                 }
             });
+        });
+
+        // Handle slider button click to scroll to contacts
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                const sliderButton = document.getElementById('slide-1587-layer-3');
+                if (sliderButton) {
+                    sliderButton.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const contactsSection = document.getElementById('contacts');
+                        if (contactsSection) {
+                            const offset = 50;
+                            const targetPosition = contactsSection.offsetTop - offset;
+                            window.scrollTo({top: targetPosition, behavior: 'smooth'});
+                        }
+                    });
+                }
+            }, 1000);
         });
     </script>
 </body>
